@@ -7,7 +7,9 @@
  */
 function convertToCelsius(f) {
   // TODO
-  return (f - 32) * (5 / 9);
+  console.log("call: concertToCelcius");
+  const temp = (f - 32) * (5 / 9);
+  return parseInt(temp.toFixed(0));
 }
 
 /**
@@ -25,15 +27,15 @@ function convertToCelsius(f) {
  */
 function describeTemperature(f) {
   // TODO
-  const c = convertToCelsius(f);
-
-  if (c < 32) {
+  const c = convertToCelsius(f).toFixed(1);
+  
+  if (f < 32) {
     return "very cold";
-  } else if (c < 64) {
+  } else if (f < 64) {
     return "cold";
-  } else if (c < 86) {
+  } else if (f < 86) {
     return "warm";
-  } else if (c < 100) {
+  } else if (f < 100) {
     return "hot";
   } else {
     return "very hot";
@@ -46,7 +48,7 @@ function describeTemperature(f) {
  */
 function getRandomInt(limit) {
   // TODO
-  return (Math.random(limit)*100).toFixed(0);
+  return (Math.random(limit) * 100).toFixed(0);
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
