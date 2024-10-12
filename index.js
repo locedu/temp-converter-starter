@@ -7,6 +7,7 @@
  */
 function convertToCelsius(f) {
   // TODO
+  return (f - 32) * (5 / 9);
 }
 
 /**
@@ -24,6 +25,19 @@ function convertToCelsius(f) {
  */
 function describeTemperature(f) {
   // TODO
+  const c = convertToCelsius(f);
+
+  if (c < 32) {
+    return "very cold";
+  } else if (c < 64) {
+    return "cold";
+  } else if (c < 86) {
+    return "warm";
+  } else if (c < 100) {
+    return "hot";
+  } else {
+    return "very hot";
+  }
 }
 
 /**
@@ -32,6 +46,7 @@ function describeTemperature(f) {
  */
 function getRandomInt(limit) {
   // TODO
+  return (Math.random(limit)*100).toFixed(0);
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
